@@ -1,22 +1,89 @@
 
+// Al-Tajer Digital Brand Colors
 export const COLORS = {
-  primary: '#1e4d40',
-  secondary: '#27ae60',
-  accent: '#c2a378',
-  dark: '#0a111a',
-  surface: '#1f2937',
-  text: '#1a1a1a',
+  // Primary Brand Colors
+  primary: '#2563EB',      // Electric Blue - Primary accent
+  secondary: '#10B981',    // Emerald Green - Success/Secondary
+  accent: '#F59E0B',       // Amber - Highlights
+  
+  // Neutral Colors
+  dark: '#0F172A',         // Charcoal Black - Headlines
+  surface: '#F8FAFC',      // Light Gray - Background alternative
+  text: '#4B5563',         // Dark Gray - Body text
+  white: '#FFFFFF',        // Pure White
+  
+  // Tag & Highlight Colors
+  mint: '#D1FAE5',         // Mint Green - Tags
+  purple: '#E9D5FF',       // Soft Purple - Tags
+  orange: '#FED7AA',       // Soft Orange - Alerts
 };
 
+// Al-Tajer Digital Modern Themes
 export const THEMES = [
-  { name: 'كحلي المستثمر', primary: '#0f172a', secondary: '#0ea5e9', bg: '#f8fafc', text: '#1e293b' },
-  { name: 'الأحمر الصيني', primary: '#991b1b', secondary: '#f59e0b', bg: '#fffbeb', text: '#450a0a' },
-  { name: 'سيان الابتكار', primary: '#0d9488', secondary: '#22d3ee', bg: '#f0fdfa', text: '#134e4a' },
-  { name: 'فوشيا التحليل', primary: '#be185d', secondary: '#f472b6', bg: '#fdf2f8', text: '#500724' },
-  { name: 'برتقالي الحركة', primary: '#c2410c', secondary: '#fb923c', bg: '#fff7ed', text: '#431407' },
-  { name: 'لايم النمو', primary: '#4d7c0f', secondary: '#a3e635', bg: '#f7fee7', text: '#1a2e05' },
-  { name: 'بنفسجي العمق', primary: '#6d28d9', secondary: '#a78bfa', bg: '#f5f3ff', text: '#1e1b4b' },
-  { name: 'الوضع الداكن', primary: '#10b981', secondary: '#f43f5e', bg: '#020617', text: '#f8fafc' },
+  { 
+    name: 'الأزرق الكهربائي', 
+    primary: '#2563EB',     // Electric Blue
+    secondary: '#10B981',   // Emerald
+    accent: '#3B82F6',      // Bright Blue
+    bg: '#FFFFFF',          // White
+    text: '#0F172A'         // Charcoal
+  },
+  { 
+    name: 'الفضي الفاخر', 
+    primary: '#1E293B',     // Slate
+    secondary: '#64748B',   // Gray
+    accent: '#94A3B8',      // Light Gray
+    bg: '#F8FAFC',          // Light Gray
+    text: '#0F172A'         // Charcoal
+  },
+  { 
+    name: 'الأخضر النمو', 
+    primary: '#059669',     // Emerald
+    secondary: '#10B981',   // Green
+    accent: '#34D399',      // Mint
+    bg: '#F0FDF4',          // Light Green
+    text: '#064E3B'         // Dark Green
+  },
+  { 
+    name: 'البنفسجي الإبداعي', 
+    primary: '#7C3AED',     // Violet
+    secondary: '#A78BFA',   // Light Purple
+    accent: '#C4B5FD',      // Soft Purple
+    bg: '#F5F3FF',          // Light Purple
+    text: '#4C1D95'         // Dark Purple
+  },
+  { 
+    name: 'البرتقالي الحيوي', 
+    primary: '#EA580C',     // Orange
+    secondary: '#FB923C',   // Light Orange
+    accent: '#FDBA74',      // Soft Orange
+    bg: '#FFF7ED',          // Light Orange
+    text: '#7C2D12'         // Dark Orange
+  },
+  { 
+    name: 'الوردي العصري', 
+    primary: '#DB2777',     // Pink
+    secondary: '#F472B6',   // Light Pink
+    accent: '#FBCFE8',      // Soft Pink
+    bg: '#FDF2F8',          // Light Pink
+    text: '#831843'         // Dark Pink
+  },
+  { 
+    name: 'الأزرق السماوي', 
+    primary: '#0284C7',     // Sky Blue
+    secondary: '#38BDF8',   // Light Sky
+    accent: '#BAE6FD',      // Soft Sky
+    bg: '#F0F9FF',          // Light Sky
+    text: '#0C4A6E'         // Dark Sky
+  },
+  { 
+    name: 'الوضع الداكن', 
+    primary: '#10B981',     // Emerald
+    secondary: '#3B82F6',   // Blue
+    accent: '#8B5CF6',      // Violet
+    bg: '#0F172A',          // Charcoal
+    text: '#F8FAFC'         // White
+  },
 ];
 
 export const DEFAULT_PROJECT_NAME = "مشروع رؤية إبداعية";

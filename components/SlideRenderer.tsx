@@ -43,8 +43,14 @@ const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, scale = 1, id }) =
     <div className={`intro-slide ${slideClass}`} style={{ backgroundColor: c.bg }}>
       <Pattern />
       <LogoOverlay />
-      <div className="intro-header"
-           style={{ background: `linear-gradient(to bottom, ${c.primary}, ${c.primary}dd), url(${slide.heroImage || 'https://images.unsplash.com/photo-1589407633215-460d36746401?q=80&w=800'}) center/cover` }}>
+      <div 
+        className="intro-header"
+        style={{ 
+          background: `linear-gradient(135deg, ${c.primary}, ${c.accent || c.secondary}), url(${slide.heroImage || 'https://images.unsplash.com/photo-1589407633215-460d36746401?q=80&w=800'}) center/cover`,
+          '--header-primary': c.primary,
+          '--header-secondary': c.accent || c.secondary
+        } as React.CSSProperties}
+      >
         <div className="intro-subtitle-wrapper">
           <span className="intro-subtitle-icon">🇸🇦</span>
           <h3 className="intro-subtitle">{slide.subtitle}</h3>
@@ -56,23 +62,39 @@ const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, scale = 1, id }) =
         <p className="intro-description" style={{ color: c.primary }}>
           {slide.description}
         </p>
-        <div className="intro-divider" style={{ backgroundColor: c.secondary }}></div>
+        <div className="intro-divider" style={{ 
+          background: `linear-gradient(90deg, ${c.primary}, ${c.secondary})`,
+          '--accent-primary': c.primary,
+          '--accent-secondary': c.secondary
+        } as React.CSSProperties}></div>
       </div>
 
-      <div className="intro-footer" style={{ backgroundColor: c.bg, borderColor: `${c.primary}1a` }}>
+      <div className="intro-footer" style={{ 
+        backgroundColor: `${c.bg}dd`,
+        borderColor: `${c.primary}1a`,
+        '--text-primary': c.text
+      } as React.CSSProperties}>
         <span className="intro-footer-text" style={{ color: c.primary }}>{slide.footer}</span>
         <div className="intro-footer-indicators">
-          <div className="footer-indicator-dot" style={{ backgroundColor: c.primary }}></div>
+          <div className="footer-indicator-dot" style={{ 
+            background: `linear-gradient(135deg, ${c.primary}, ${c.secondary})`,
+            '--accent-primary': c.primary,
+            '--accent-secondary': c.secondary
+          } as React.CSSProperties}></div>
           <div className="footer-indicator-line" style={{ backgroundColor: `${c.primary}33` }}></div>
         </div>
       </div>
 
       <div className="slide-footer-bar">
         <div className="slide-footer-text-container">
-          <span className="slide-footer-right" style={{ color: c.primary }}>منصة المستثمر</span>
-          <span className="slide-footer-left" style={{ color: c.primary }}>al_investor.com</span>
+          <span className="slide-footer-right" style={{ color: c.primary }}>منصة التاجر الرقمية</span>
+          <span className="slide-footer-left" style={{ color: c.primary }}>Al-Tajer Digital</span>
         </div>
-        <div className="slide-footer-bar-line" style={{ background: `linear-gradient(to right, ${c.primary}, ${c.secondary})` }}></div>
+        <div className="slide-footer-bar-line" style={{ 
+          background: `linear-gradient(to right, ${c.primary}, ${c.secondary})`,
+          '--footer-primary': c.primary,
+          '--footer-secondary': c.secondary
+        } as React.CSSProperties}></div>
       </div>
     </div>
   );
@@ -81,30 +103,47 @@ const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, scale = 1, id }) =
     <div className={`stats-slide ${slideClass}`} style={{ backgroundColor: c.bg }}>
       <Pattern />
       <LogoOverlay />
-      <div className="stats-header" style={{ backgroundColor: c.primary }}>
+      <div className="stats-header" style={{ 
+        backgroundColor: c.primary,
+        '--header-primary': c.primary,
+        '--header-secondary': c.accent || c.secondary
+      } as React.CSSProperties}>
         <h2 className="stats-title">{slide.title}</h2>
       </div>
       <div className="stats-content">
         {slide.stats?.map((stat, i) => (
           <div key={stat.id} className="stat-item">
-            <div className="stat-value" style={{ color: i % 2 === 0 ? c.primary : c.secondary }}>
+            <div className="stat-value" style={{ 
+              '--accent-primary': c.primary,
+              '--accent-secondary': c.secondary
+            } as React.CSSProperties}>
               {stat.value}
             </div>
-            <div className="stat-divider" style={{ backgroundColor: `${c.primary}1a` }}></div>
-            <div className="stat-label" style={{ color: c.primary }}>{stat.label}</div>
+            <div className="stat-divider" style={{ 
+              backgroundColor: `${c.primary}1a`,
+              background: `linear-gradient(180deg, ${i % 2 === 0 ? c.primary : c.secondary}, ${c.secondary})`
+            }}></div>
+            <div className="stat-label" style={{ color: c.text }}>{stat.label}</div>
           </div>
         ))}
       </div>
-      <div className="stats-footer" style={{ borderColor: `${c.primary}1a` }}>
+      <div className="stats-footer" style={{ 
+        borderColor: `${c.primary}1a`,
+        '--text-primary': c.text
+      } as React.CSSProperties}>
         <span className="stats-footer-text" style={{ color: c.primary }}>{slide.footer}</span>
       </div>
 
       <div className="slide-footer-bar">
         <div className="slide-footer-text-container">
-          <span className="slide-footer-right" style={{ color: c.primary }}>منصة المستثمر</span>
-          <span className="slide-footer-left" style={{ color: c.primary }}>al_investor.com</span>
+          <span className="slide-footer-right" style={{ color: c.primary }}>منصة التاجر الرقمية</span>
+          <span className="slide-footer-left" style={{ color: c.primary }}>Al-Tajer Digital</span>
         </div>
-        <div className="slide-footer-bar-line" style={{ background: `linear-gradient(to right, ${c.primary}, ${c.secondary})` }}></div>
+        <div className="slide-footer-bar-line" style={{ 
+          background: `linear-gradient(to right, ${c.primary}, ${c.secondary})`,
+          '--footer-primary': c.primary,
+          '--footer-secondary': c.secondary
+        } as React.CSSProperties}></div>
       </div>
     </div>
   );
@@ -113,35 +152,53 @@ const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, scale = 1, id }) =
     <div className={`points-slide ${slideClass}`} style={{ backgroundColor: c.bg }}>
       <Pattern />
       <LogoOverlay />
-      <div className="points-header" style={{ borderColor: c.secondary }}>
+      <div className="points-header" style={{ 
+        borderColor: `${c.secondary}33`,
+        '--text-primary': c.text
+      } as React.CSSProperties}>
         <h2 className="points-title" style={{ color: c.primary }}>{slide.title}</h2>
       </div>
       <div className="points-content">
         {slide.points?.map((point, i) => (
-          <div key={point.id} className="point-item" style={{ backgroundColor: `${c.primary}05`, borderColor: `${c.primary}11` }}>
-            <span className="point-number" style={{ backgroundColor: c.primary }}>
+          <div key={point.id} className="point-item" style={{ 
+            '--accent-primary': c.primary,
+            '--accent-secondary': c.secondary
+          } as React.CSSProperties}>
+            <span className="point-number" style={{ 
+              background: `linear-gradient(135deg, ${c.primary}, ${c.secondary})`
+            }}>
               {i + 1}
             </span>
-            <p className="point-text" style={{ color: c.primary }}>{point.text}</p>
+            <p className="point-text" style={{ color: c.text }}>{point.text}</p>
           </div>
         ))}
       </div>
-      <div className="points-footer" style={{ borderColor: `${c.primary}1a` }}>
+      <div className="points-footer" style={{ 
+        borderColor: `${c.primary}1a`,
+        '--text-primary': c.text
+      } as React.CSSProperties}>
         <span className="points-footer-text" style={{ color: c.primary }}>{slide.footer}</span>
       </div>
 
       <div className="slide-footer-bar">
         <div className="slide-footer-text-container">
-          <span className="slide-footer-right" style={{ color: c.primary }}>منصة المستثمر</span>
-          <span className="slide-footer-left" style={{ color: c.primary }}>al_investor.com</span>
+          <span className="slide-footer-right" style={{ color: c.primary }}>منصة التاجر الرقمية</span>
+          <span className="slide-footer-left" style={{ color: c.primary }}>Al-Tajer Digital</span>
         </div>
-        <div className="slide-footer-bar-line" style={{ background: `linear-gradient(to right, ${c.primary}, ${c.secondary})` }}></div>
+        <div className="slide-footer-bar-line" style={{ 
+          background: `linear-gradient(to right, ${c.primary}, ${c.secondary})`,
+          '--footer-primary': c.primary,
+          '--footer-secondary': c.secondary
+        } as React.CSSProperties}></div>
       </div>
     </div>
   );
 
   const renderClosing = () => (
-    <div className={`closing-slide ${slideClass}`} style={{ backgroundColor: c.primary }}>
+    <div className={`closing-slide ${slideClass}`} style={{ 
+      backgroundColor: c.primary,
+      background: `linear-gradient(135deg, ${c.primary}, ${c.accent || c.secondary})`
+    }}>
       <Pattern />
       <LogoOverlay />
       <div className="closing-content">
@@ -150,11 +207,15 @@ const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, scale = 1, id }) =
         </div>
         <h2 className="closing-title">{slide.title}</h2>
         <p className="closing-description">{slide.description}</p>
-        <div className="closing-cta" style={{ backgroundColor: c.bg, color: c.primary }}>
+        <div className="closing-cta" style={{ 
+          backgroundColor: c.bg, 
+          color: c.primary,
+          '--accent-primary': c.primary
+        } as React.CSSProperties}>
           تواصل معنا الآن
         </div>
       </div>
-      <div className="closing-footer" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
+      <div className="closing-footer" style={{ borderColor: 'rgba(255,255,255,0.15)' }}>
         <div className="closing-social">
           <span>X</span><span>Instagram</span><span>LinkedIn</span>
         </div>
@@ -163,10 +224,14 @@ const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, scale = 1, id }) =
 
       <div className="slide-footer-bar">
         <div className="slide-footer-text-container">
-          <span className="slide-footer-right" style={{ color: '#ffffff' }}>منصة المستثمر</span>
-          <span className="slide-footer-left" style={{ color: '#ffffff' }}>al_investor.com</span>
+          <span className="slide-footer-right" style={{ color: '#ffffff' }}>منصة التاجر الرقمية</span>
+          <span className="slide-footer-left" style={{ color: '#ffffff' }}>Al-Tajer Digital</span>
         </div>
-        <div className="slide-footer-bar-line" style={{ background: `linear-gradient(to right, #ffffff, ${c.secondary})` }}></div>
+        <div className="slide-footer-bar-line" style={{ 
+          background: `linear-gradient(to right, #ffffff, ${c.secondary})`,
+          '--footer-primary': '#ffffff',
+          '--footer-secondary': c.secondary
+        } as React.CSSProperties}></div>
       </div>
     </div>
   );

@@ -88,10 +88,10 @@ const App: React.FC = () => {
     <div className="app-container">
       <header className="app-navbar">
         <div className="navbar-brand">
-          <div className="brand-icon">🇸🇦</div>
+          <div className="brand-icon">💼</div>
           <div className="brand-title-container">
-            <h1 className="brand-title">استوديو الكاروسيل <span className="brand-title-accent">الاحترافي</span></h1>
-            <p className="brand-subtitle">رؤية السعودية 2030</p>
+            <h1 className="brand-title">التاجر الرقمي <span className="brand-title-accent">Al-Tajer</span></h1>
+            <p className="brand-subtitle">منصة المتسثمر الحديثة</p>
           </div>
         </div>
 
