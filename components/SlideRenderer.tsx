@@ -87,8 +87,8 @@ const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, scale = 1, id }) =
 
       <div className="slide-footer-bar">
         <div className="slide-footer-text-container">
-          <span className="slide-footer-right" style={{ color: c.primary }}>منصة التاجر الرقمية</span>
-          <span className="slide-footer-left" style={{ color: c.primary }}>Al-Tajer Digital</span>
+          <span className="slide-footer-right" style={{ color: c.primary }}>منصة التاجر</span>
+          <span className="slide-footer-left" style={{ color: c.primary }}>dtajer.com</span>
         </div>
         <div className="slide-footer-bar-line" style={{ 
           background: `linear-gradient(to right, ${c.primary}, ${c.secondary})`,
@@ -136,8 +136,8 @@ const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, scale = 1, id }) =
 
       <div className="slide-footer-bar">
         <div className="slide-footer-text-container">
-          <span className="slide-footer-right" style={{ color: c.primary }}>منصة التاجر الرقمية</span>
-          <span className="slide-footer-left" style={{ color: c.primary }}>Al-Tajer Digital</span>
+          <span className="slide-footer-right" style={{ color: c.primary }}>منصة التاجر</span>
+          <span className="slide-footer-left" style={{ color: c.primary }}>dtajer.com</span>
         </div>
         <div className="slide-footer-bar-line" style={{ 
           background: `linear-gradient(to right, ${c.primary}, ${c.secondary})`,
@@ -182,8 +182,8 @@ const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, scale = 1, id }) =
 
       <div className="slide-footer-bar">
         <div className="slide-footer-text-container">
-          <span className="slide-footer-right" style={{ color: c.primary }}>منصة التاجر الرقمية</span>
-          <span className="slide-footer-left" style={{ color: c.primary }}>Al-Tajer Digital</span>
+          <span className="slide-footer-right" style={{ color: c.primary }}>منصة التاجر</span>
+          <span className="slide-footer-left" style={{ color: c.primary }}>dtajer.com</span>
         </div>
         <div className="slide-footer-bar-line" style={{ 
           background: `linear-gradient(to right, ${c.primary}, ${c.secondary})`,
@@ -224,8 +224,8 @@ const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, scale = 1, id }) =
 
       <div className="slide-footer-bar">
         <div className="slide-footer-text-container">
-          <span className="slide-footer-right" style={{ color: '#ffffff' }}>منصة التاجر الرقمية</span>
-          <span className="slide-footer-left" style={{ color: '#ffffff' }}>Al-Tajer Digital</span>
+          <span className="slide-footer-right" style={{ color: '#ffffff' }}>منصة التاجر</span>
+          <span className="slide-footer-left" style={{ color: '#ffffff' }}>dtajer.com</span>
         </div>
         <div className="slide-footer-bar-line" style={{ 
           background: `linear-gradient(to right, #ffffff, ${c.secondary})`,

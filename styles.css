@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Cairo', 'Tajawal', 'Almarai', 'IBM Plex Sans Arabic', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', 'Cairo', 'Tajawal', 'Almarai', sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -930,7 +930,7 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
-  font-family: 'Cairo', 'Tajawal', 'Almarai', 'IBM Plex Sans Arabic', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', 'Cairo', 'Tajawal', 'Almarai', sans-serif;
 }
 
 .intro-header,

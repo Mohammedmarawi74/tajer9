@@ -91,7 +91,7 @@ const App: React.FC = () => {
           <div className="brand-icon">💼</div>
           <div className="brand-title-container">
             <h1 className="brand-title">التاجر الرقمي <span className="brand-title-accent">Al-Tajer</span></h1>
-            <p className="brand-subtitle">منصة المتسثمر الحديثة</p>
+            <p className="brand-subtitle">منصة التاجر الرقمية</p>
           </div>
         </div>
 
